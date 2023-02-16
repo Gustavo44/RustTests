@@ -8,7 +8,89 @@ use std::cmp::Ordering;
 
 
 fn main() {
-    tenth_function()
+    //eleventh_function();
+    seventeenth_function()
+}
+
+fn seventeenth_function() {
+    let st3 = String::from("x r t b h k k a m c");
+    let mut v1: Vec<char> = st3.chars().collect();
+    v1.sort();
+    v1.dedup();
+    for char in v1 {
+        println!("{}", char);
+    }
+    let st4: &str = "Random string";
+    let mut st5: String = st4.to_string();
+    println!("{}", st5);
+    let byte_arr1 = st5.as_bytes();
+    let st6 = &st5[0..6];
+    println!("String length : {}", st6.len());
+    st5.clear();
+    let st6 = String::from("Just some");
+    let st7 = String::from(" words");
+    let st8 = st6 + &st7;
+    for char in st8.bytes(){
+        println!("{}", char);
+    }
+}
+
+fn sixteenth_function() {
+    let mut st1 = String::new();
+    st1.push('A');
+    st1.push_str(" word");
+    for word in st1.split_whitespace(){
+        println!("{}", word);
+    }
+    let st2 = st1.replace("A", "Another");
+    println!("{}", st2);
+}
+
+fn fifteenth_function() {
+    let my_tuple: (u8, String, f64) = (47, "Derek".to_string(), 50_000.00);
+
+    println!("Name : {}", my_tuple.1);
+    let(v1, v2, v3) = my_tuple;
+    println!("Age : {}", v1);
+}
+
+fn fourteenth_function() {
+    let arr_2 = [1,2,3,4,5,6,7,8,9];
+    let mut loop_idx = 0;
+    for val in arr_2.iter() {
+        println!("Val : {}", val);
+    }
+}
+
+fn thirteenth_function() {
+    let arr_2 = [1,2,3,4,5,6,7,8,9];
+    let mut loop_idx = 0;
+    while loop_idx < arr_2.len(){
+        println!("Arr : {}", arr_2[loop_idx]);
+        loop_idx += 1;
+    }
+}
+
+fn twelfth_function() {
+    let arr_2 = [1,2,3,4,5,6,7,8,9];
+    let mut loop_idx = 0;
+    loop {
+        if arr_2[loop_idx] %2 == 0 {
+            loop_idx +=1;
+            continue;
+        }
+        if arr_2[loop_idx] == 9 {
+            break;
+        }
+        println!("Val : {}", arr_2[loop_idx]);
+        loop_idx +=1;
+    }
+}
+
+fn eleventh_function() {
+    let arr_1 = [1,2,3,4];
+    println!("1st : {}", arr_1[0]);
+    println!("Length : {}", arr_1.len());
 }
 
 fn tenth_function() {
